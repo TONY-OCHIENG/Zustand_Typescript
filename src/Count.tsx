@@ -9,7 +9,7 @@ function Count() {
     const { count,increment,decrement } = useStore()
   return (
     <div className='flex justify-center items-center h-[100vh] flex-col'>
-        <h1>{count}</h1>
+        <h1>{count <= 0 ? 0 : count}</h1>
         <div className='flex gap-10'>
             <Button onClick={decrement}>Decrement</Button>
             <Button onClick={increment}>Increment</Button>
